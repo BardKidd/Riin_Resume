@@ -1,0 +1,13 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Private Data
+林霈文104.pdf
+
+# Logs & Temp
+*.log
+__pycache__/
+
+# Dependencies
+node_modules/

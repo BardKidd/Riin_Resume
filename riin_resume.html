@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>林霈文 Lin Pei-Wen - Resume</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Inter"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              black: '#000000',
+              white: '#ffffff',
+              'swiss-red': '#ff3b30', // Classic Swiss accent if needed
+            },
+            spacing: {
+              128: '32rem',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.2;
+      }
+
+      /* Swiss Style Utilities */
+      .grid-lines {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 50;
+        padding: 0 2rem;
+        opacity: 0; /* Hidden by default, useful for debugging */
+      }
+      .grid-lines div {
+        background: rgba(255, 0, 0, 0.05);
+        height: 100%;
+      }
+
+      .text-balance {
+        text-wrap: balance;
+      }
+
+      /* Heavy Dividers */
+      .divider-thick {
+        border-top: 4px solid #000;
+        margin: 2rem 0;
+      }
+      .divider-thin {
+        border-top: 1px solid #000;
+        margin: 1.5rem 0;
+      }
+
+      /* Typography Hierarchy */
+      h1 {
+        letter-spacing: -2px;
+      }
+      h2 {
+        letter-spacing: -1px;
+      }
+
+      .hover-block:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body
+    class="p-6 md:p-12 max-w-[1440px] mx-auto min-h-screen flex flex-col justify-between selection:bg-black selection:text-white"
+  >
+    <!-- HEADER -->
+    <header class="mb-20">
+      <div class="divider-thick mt-0"></div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-y-8">
+        <div class="col-span-12 md:col-span-8">
+          <h1
+            class="text-7xl md:text-9xl font-black leading-none uppercase mb-4"
+          >
+            Lin <br />
+            Pei-Wen
+          </h1>
+          <p class="text-xl md:text-2xl font-bold font-mono mt-4">
+            全端工程師 FULL STACK ENGINEER
+          </p>
+        </div>
+        <div
+          class="col-span-12 md:col-span-4 flex flex-col justify-between items-start md:items-end text-right"
+        >
+          <div
+            class="text-base font-medium leading-normal text-left md:text-right"
+          >
+            <p>Kaohsiung, Taiwan</p>
+            <p>
+              <a
+                href="mailto:rinouo0922@icloud.com"
+                class="hover:bg-black hover:text-white px-1 -mr-1 transition-colors"
+                >rinouo0922@icloud.com</a
+              >
+            </p>
+            <p>0925-018-752</p>
+            <p class="mt-4">
+              <a
+                href="https://github.com/BardKidd"
+                target="_blank"
+                class="underline decoration-2 underline-offset-4 hover:bg-black hover:text-white transition-colors"
+                >github.com/BardKidd</a
+              >
+            </p>
+          </div>
+          <div
+            class="mt-8 md:mt-0 w-24 h-24 bg-black text-white flex items-center justify-center rounded-full font-bold text-xs rotate-12"
+          >
+            OPEN TO<br />WORK
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-3">
+          <h2
+            class="text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-2 mb-4"
+          >
+            Profile
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <p
+            class="text-3xl md:text-4xl font-bold leading-tight indent-12 md:indent-24 max-w-4xl"
+          >
+            擁有 4 年以上開發經驗。專注於
+            <span class="bg-black text-white px-2">React</span> 與
+            <span class="bg-black text-white px-2">Vue</span> 雙框架應用，
+            擅長建構大型系統架構 (Turborepo / Webpack Federation)。 引入
+            Playwright 與 Vitest 進行自動化測試，並結合 AI Vibe Coding
+            工作流提升開發效率。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-3">
+          <h2
+            class="text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-2 mb-4"
+          >
+            Experience
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-9 space-y-12">
+          <!-- Role 1 -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-6 border-b border-gray-300 pb-12"
+          >
+            <div class="col-span-12 md:col-span-3 font-mono text-sm font-bold">
+              2025.11 — Present
+            </div>
+            <div class="col-span-12 md:col-span-9">
+              <h3 class="text-2xl font-black uppercase mb-2">獨立開發者</h3>
+              <div
+                class="flex flex-wrap gap-2 text-xs font-bold font-mono mb-4 text-gray-500"
+              >
+                <span>NODE.JS</span> / <span>AI AGENT WORKFLOW</span> /
+                <span>SYSTEM DESIGN</span>
+              </div>
+              <p class="text-lg text-gray-800 leading-relaxed max-w-3xl mb-4">
+                利用規劃性的職涯暫停進行全端技術轉型。建立標準化
+                <strong>AI 輔助開發流程 (AI-Assisted Workflow)</strong>：
+              </p>
+              <ul
+                class="list-none space-y-2 text-lg text-gray-800 leading-relaxed max-w-3xl"
+              >
+                <li>
+                  • <strong>規格驅動 (SDD)</strong>：運用 DDD
+                  劃分邊界，先行定義資料庫與 API 規格。
+                </li>
+                <li>
+                  • <strong>測試驅動 (TDD)</strong>：在編碼前撰寫 Playwright
+                  (E2E) 與 Vitest (UT) 測試。
+                </li>
+                <li>
+                  • <strong>AI 協作</strong>：透過 Vibe-Kanban
+                  進行任務管理，結合 AI Agent 實現高效率的單人全端交付。
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-6 border-b border-gray-300 pb-12"
+          >
+            <div class="col-span-12 md:col-span-3 font-mono text-sm font-bold">
+              2022.05 — 2025.09
+            </div>
+            <div class="col-span-12 md:col-span-9">
+              <h3 class="text-2xl font-black uppercase mb-2">
+                Wistron Corp. 緯創資通
+              </h3>
+              <div
+                class="flex flex-wrap gap-2 text-xs font-bold font-mono mb-4 text-gray-500"
+              >
+                <span>REACT</span> / <span>VUE</span> / <span>TURBOREPO</span> /
+                <span>MICRO-FRONTEND</span>
+              </div>
+              <ul
+                class="list-none space-y-3 text-lg text-gray-800 leading-relaxed max-w-3xl"
+              >
+                <li>
+                  • <strong>架構現代化</strong>：透過 Turborepo 管理 Monorepo
+                  專案，統一跨團隊開發標準。
+                </li>
+                <li>
+                  • <strong>品質保證</strong>：運用 Cypress 進行 E2E 測試，減少
+                  50% 手動測試時間。
+                </li>
+                <li>
+                  • <strong>企業安全</strong>：成功整合 Azure
+                  SSO，提升系統安全性與使用者體驗。
+                </li>
+                <li>
+                  •
+                  <strong>知識傳承</strong
+                  >：建立元件庫與文件系統，協助團隊成員快速上手。
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="col-span-12 md:col-span-3 font-mono text-sm font-bold">
+              2021.02 — 2021.12
+            </div>
+            <div class="col-span-12 md:col-span-9">
+              <h3 class="text-2xl font-black uppercase mb-2">
+                YAJIA Technical Co., Ltd. 亞家科技
+              </h3>
+              <div
+                class="flex flex-wrap gap-2 text-xs font-bold font-mono mb-4 text-gray-500"
+              >
+                <span>VUE.JS</span> / <span>ELEMENT UI</span>
+              </div>
+              <p class="text-lg text-gray-800 leading-relaxed max-w-3xl">
+                負責 Vue.js 元件庫開發與後台管理系統介面實作。與 UI/UX
+                設計師協作，打造高互動性的檔案上傳平台。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATION (New Section) -->
+    <section class="mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-3">
+          <h2
+            class="text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-2 mb-4"
+          >
+            Certification
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <div
+            class="flex items-center gap-6 border border-black p-6 hover:bg-black hover:text-white transition-colors group"
+          >
+            <div
+              class="w-16 h-16 flex-shrink-0 bg-white p-1 rounded-sm overflow-hidden"
+            >
+              <img
+                src="./assets/az900.png"
+                alt="AZ-900 Badge"
+                class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div>
+              <h3 class="text-xl font-black uppercase">
+                Microsoft Certified: Azure Fundamentals
+              </h3>
+              <p class="font-mono text-xs mt-1 opacity-60">EARNED: 2025</p>
+              <p class="mt-2 text-sm font-medium">
+                Verified technical skills in cloud concepts, Azure services,
+                workloads, security, and privacy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="mb-24 bg-black text-white p-6 md:p-12 -mx-6 md:-mx-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-3">
+          <h2
+            class="text-sm font-bold uppercase tracking-widest border-b-2 border-white pb-2 mb-4 text-white"
+          >
+            Tech Stack
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h4 class="font-mono text-sm uppercase text-gray-400 mb-4">
+                Frontend Core
+              </h4>
+              <ul class="text-xl font-bold space-y-2">
+                <li>React / Next.js</li>
+                <li>Vue.js (2 & 3)</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS / Shadcn UI</li>
+                <li>Context API / Zod / React-Hook-Form</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-mono text-sm uppercase text-gray-400 mb-4">
+                Backend & DevOps
+              </h4>
+              <ul class="text-xl font-bold space-y-2">
+                <li>Node.js (Express)</li>
+                <li>PostgreSQL / Sequelize</li>
+                <li>Playwright / Vitest / Cypress</li>
+                <li>GitHub Actions (CI/CD)</li>
+                <li>Azure (AZ-900 Certified)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="mb-32">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-3">
+          <h2
+            class="text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-2 mb-4"
+          >
+            Projects
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <!-- Project Item -->
+          <div class="mb-16">
+            <div
+              class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
+            >
+              <h3 class="text-4xl md:text-5xl font-black uppercase mb-2">
+                Easy Accounting
+              </h3>
+              <a
+                href="https://riinouo-eaccounting.win"
+                target="_blank"
+                class="font-mono text-sm underline decoration-2 underline-offset-4 hover:bg-black hover:text-white transition-colors"
+                >riinouo-eaccounting.win ↗</a
+              >
+            </div>
+            <!-- IMAGE GRID (Swiss Style: Strict Alignment) -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div
+                class="aspect-video bg-gray-100 border border-black overflow-hidden group"
+              >
+                <img
+                  src="./assets/ea_1.png"
+                  alt="Screenshot 1"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+                />
+              </div>
+              <div
+                class="aspect-video bg-gray-100 border border-black overflow-hidden group"
+              >
+                <img
+                  src="./assets/ea_2.png"
+                  alt="Screenshot 2"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+                />
+              </div>
+              <div
+                class="aspect-video bg-gray-100 border border-black overflow-hidden group"
+              >
+                <img
+                  src="./assets/ea_3.png"
+                  alt="Screenshot 3"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            <div class="border-t-4 border-black mb-6"></div>
+            <p class="text-lg leading-relaxed max-w-4xl mb-6">
+              一個展現端對端工程能力的完整記帳平台。使用 React 與 Node.js 建構。
+              整合了互動式 ECharts 報表與 Resend 自動化郵件通知。 透過 GitHub
+              Actions 建立完整的 CI/CD 流程並部署至 Vercel 與 Railway。
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="border border-black px-3 py-1 text-xs font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-default"
+                >Full Stack</span
+              >
+              <span
+                class="border border-black px-3 py-1 text-xs font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-default"
+                >React</span
+              >
+              <span
+                class="border border-black px-3 py-1 text-xs font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-default"
+                >Node.js</span
+              >
+              <span
+                class="border border-black px-3 py-1 text-xs font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-default"
+                >Sequelize</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t-4 border-black pt-12 pb-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-6">
+          <p class="text-8xl font-black leading-none">THANK<br />YOU.</p>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 flex flex-col justify-end text-left md:text-right"
+        >
+          <p class="text-sm font-bold uppercase tracking-widest mb-2">
+            Contact
+          </p>
+          <p class="text-2xl font-bold mb-1">rinouo0922@icloud.com</p>
+          <p class="text-lg">0925-018-752</p>
+          <p class="mt-8 text-xs text-gray-500 uppercase">
+            © 2026 Lin Pei-Wen. Swiss Grid Layout.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
